@@ -14,7 +14,7 @@ document.onmousemove = function (event) {
 			x: document.body.clientWidth,
 			y: document.body.clientHeight
 		},
-		x = (m.x - cx) / (win.x) ,
+		x = (m.x - cx) / (win.x) * 25,
 		y = (m.y - cy) / (win.y) ;
 
 	iris.attr('cx', x + cx);
@@ -42,7 +42,7 @@ function irisRadiusAnimation(e) {
 			if (s < e) clearInterval(loop);
 			iris.attr('r', s);
 			pupil.attr('r', s/1.5);
-			s = s - 0.5;
+			s = Math.abs(s - 0.5);
 		}, 30);
 		return a = 'Bolshe';
 	};
@@ -52,7 +52,7 @@ function irisRadiusAnimation(e) {
 			if (s > e) clearInterval(loop);
 			iris.attr('r', s);
 			pupil.attr('r', s/1.5);
-			s = s + 0.5;
+			s = Math.abs(s + 0.5);
 		}, 30);
 		return a = 'Menshe';
 	};
@@ -63,4 +63,4 @@ function irisRadiusAnimation(e) {
 
 	
 //setInterval (function () {console.log (random(iris.attr('r')))}, 1000);
-loop = setInterval(function () {irisRadiusAnimation (random(15,30));}, random(1000,3000))
+// loop = setInterval(function () {irisRadiusAnimation (random(15,30));}, random(1000,3000))
