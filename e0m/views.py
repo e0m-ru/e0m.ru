@@ -1,5 +1,9 @@
-from django.http import HttpResponse
+from django.http import Http404
+from django.shortcuts import render
 
 
-def index(request):
-    return HttpResponse("e0m.ru")
+def index(request):   
+    context = {
+        'title': 'Бабушкин А.В. e0m.ru'
+    }
+    return render(request, 'e0m/index.html', context)

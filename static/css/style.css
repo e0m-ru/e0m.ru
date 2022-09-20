@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+}
+
+path .blue {
+	fill: #0099CC;
+}
+
+path .white {
+	fill: #FFFFFF;
+}
+
+path .black {
+	fill: #000000;
+}
+
+path .white-stroke {
+	fill: none;
+	stroke: #FFFFFF;
+	stroke-miterlimit: 10;
+	stroke-width: 2
+}
