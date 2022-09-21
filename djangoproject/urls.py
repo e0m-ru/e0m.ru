@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
+from django.http.response import HttpResponseNotFound
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('e0m.urls'))
+    path('admin/assa', admin.site.urls),
+    path('', include('e0m.urls')),
 ]
