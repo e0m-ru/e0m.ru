@@ -1,35 +1,4 @@
-body {
-	margin: 0;	
-	background-color: #b1358a;
+:root{
+	--main-color: #b1358a;
 }
 
-.main {
-	fill: #b1358a;
-}
-
-.white {
-	fill: #FFFFFF;
-}
-
-.black {
-	fill: #000000;
-}
-
-.white-stroke {
-	fill: none;
-	stroke: #FFFFFF;
-	stroke-miterlimit: 10;
-	stroke-width: 2
-}
-
-.container {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-
-}
-
-header {
-	width: 100%;
-	height: 100%;
-}

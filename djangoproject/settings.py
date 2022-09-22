@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -121,5 +119,5 @@ USE_TZ = True
 
 STATIC_ROOT = f"{BASE_DIR}/static"
 STATIC_URL = '/static/'
+MEDIA_ROOT = f'{BASE_DIR}/media/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/var/www/djangoproject/media/'
