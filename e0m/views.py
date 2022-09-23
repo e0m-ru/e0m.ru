@@ -1,28 +1,25 @@
 from django.shortcuts import render
 from django.views.defaults import page_not_found
-from random import choice
-import os, io
-import subprocess
+from django.conf.global_settings import STATIC_ROOT, STATIC_URL
+from .helpers import get_log, COLOR 
+from .posts_CRUD import *
+
+
+def log(request):
+    logs = get_log()
+    context = {
+        'title': 'Log - e0m.ru',
+        'color': COLOR(),
+        'STDOUT_acces': logs['acces_log'],
+        'STDOUT_error': logs['error_log'],
+    }
+    return render(request, 'e0m/log.html', context)
+
 
 def index(request):
-    out = subprocess.Popen(['tail', '/var/log/nginx/access.log'], 
-           stdout=subprocess.PIPE, 
-           stderr=subprocess.STDOUT)
-    out = out.stdout.readlines()
-    out = map(lambda x: x.decode("utf-8"),out)
-
-    out2 = subprocess.Popen(['tail', '/var/log/nginx/error.log'], 
-           stdout=subprocess.PIPE, 
-           stderr=subprocess.STDOUT)
-    out2 = out2.stdout.readlines()
-    out2 = map(lambda x: x.decode("utf-8"),out2)
-
     context = {
         'title': 'Бабушкин А.В. e0m.ru',
-        'color': choice(os.listdir('static/css/colors/')),
-        'request': request,
-        'STDOUT_acces': out,
-        'STDOUT_error': out2,
+        'color': COLOR(),
     }
     return render(request, 'e0m/index.html', context)
 

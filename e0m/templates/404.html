@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="/static/css/colors/red.css">
-{% extends "e0m/header.html" %}
+{% extends "e0m/base.html" %}
 {% block content %}
-<div class="container">
+<style>
+    :root {
+        --main-color: #c8374f;
+    }
+</style>
     <h1>404</h1>
-    <p>Страница не найдена</p>
-</div>
+    <p>Страница {{ request.path }} не найдена</p>
 {% endblock %}

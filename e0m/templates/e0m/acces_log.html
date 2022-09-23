@@ -1,10 +1,10 @@
-<div class="terminal-window">
-    <header>
+<div class="terminal-window shadow">
+    <div class="terminal-header">
         <div class="button green" style="margin-left: 10px;"></div>
         <div class="button yellow"></div>
         <div class="button red"></div>
-        <p style="margin: 5px 0 0 33%;">/var/log/*/access.log</p>
-    </header>
+        <p>/var/log/*/access.log</p>
+    </div>
     <section class="terminal">
         {% for ln in STDOUT_acces %}
         <p>

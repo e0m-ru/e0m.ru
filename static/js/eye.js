@@ -23,13 +23,14 @@ function eyeAnimation(event) {
 		},
 		Percent = {
 			x: mouse.x / (wnd.x / 100) / 100 -.5,
-			y: mouse.y / (wnd.y / 100) / 100 -.5,
+			y: mouse.y / (wnd.y / 100) / 100 -.1,
 		}
 
 	iris.setAttribute('cx', Percent.x * logoRect.width/3 + 145);
 	iris.setAttribute('cy', Percent.y * logoRect.height/3 + 35);
 	pupil.setAttribute('cx', Percent.x * logoRect.width/2 + 145);
 	pupil.setAttribute('cy', Percent.y * logoRect.height/2 + 35);
+	pupil.setAttribute('r', Percent.y*-10 + 20);
 	hotspot.setAttribute('cx', Percent.x * logoRect.width/3 + 145);
 	hotspot.setAttribute('cy', Percent.y * logoRect.height/3 + 35);
 }
