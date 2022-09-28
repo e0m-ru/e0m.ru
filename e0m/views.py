@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.defaults import page_not_found
 from django.conf.global_settings import STATIC_ROOT, STATIC_URL
-from .helpers import get_log, COLOR 
+from .helpers import get_log, COLOR
 from .posts_CRUD import *
 
 

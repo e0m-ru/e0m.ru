@@ -3,7 +3,12 @@ from random import choice
 import os
 
 def COLOR():
-    return choice(('0099CC','079f8d','c8374f','b1358a',))
+    blue = ['0099CC', 'F68D85', 'C2254D', '4ACBF7', '236175']
+    red = ['c8374f', 'E547F5', 'C2BA25', 'F78D9E', '75434B' ]
+    green = ['079f8d', 'F685B7', 'C225B8', '54F7E4', '638F8A']
+    purple = ['b1358a', 'B447F5', 'C2AA25', 'F794D7', '754666']
+    color_scheme= dict(zip(['main','second', 'opposite', 'light', 'dark'], choice((blue, red, green, purple))))
+    return color_scheme
 
 def get_log():
     acces_log = subprocess.Popen(['tail', '/var/log/nginx/access.log'],
