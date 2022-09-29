@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-weight: 200;
+	color: var(--white-color);
 }
 
 :root {
@@ -14,8 +16,8 @@
 body {
 	background-color: var(--main-color);
 	font-family: Tahoma, Verdana, sans-serif;
-	min-height: 100vh;
-	width: 100%;
+	/* min-height: 100vh; */
+	/* width: 100%; */
 }
 
 a {
@@ -26,20 +28,12 @@ a :hover {
 	color: var(--black-color);
 }
 
-@media (min-width: 720px) {
 .container {
-	max-width: 66vw;
 	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	margin: auto;
 }
-}
-
-@media (max-width: 720px) {
-	.container {
-		width: 100%;
-		max-width: 99vw;
-	}
-  }
-
 
 /* COLORS */
 .main {
@@ -53,6 +47,7 @@ a :hover {
 
 .black {
 	fill: var(--black-color);
+	color: var(--black-color);;
 }
 
 .white-stroke {
@@ -66,19 +61,21 @@ a :hover {
 /* GRID */
 .grid {
 	display: grid;
-	grid-template-rows: 7vh auto ;
 	justify-items: stretch;
 	align-items: stretch;
 }
+
+
 
 .grid  header, article, footer {
 	display: grid;
 	place-items: center;
 }
 
-.grid_container {
+.grid-container {
 	display: grid;
 	gap: 1rem;
+	margin: 2rem 0;
 }
 
 .tab {
@@ -161,5 +158,37 @@ footer {
 .icons:hover {
 	transform: scale(1.1);
 	text-shadow: 0 0 30px var(--light-color);
+	color: var(--white-color);
+}
+
+/* FORM */
+
+form {
+	display: grid;
+	gap: 1rem;
+}
+
+input, textarea {
+	line-height: 2rem;
+	padding: .5rem 1rem;
+	border: solid 0 ;
+	border-radius: 1rem;
+	background-color: var(--white-color);
+	color: var(--dark-color);
+	font-size: 1.5rem;
+}
+
+input:focus {
+}
+
+button[type=submit] {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 1rem;
+	color: var(--dark-color);
+	font-size: 1.5rem;
+}
+button[type=submit]:hover {
+	background-color: var(--second-color);
 	color: var(--white-color);
 }

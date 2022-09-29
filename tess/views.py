@@ -14,7 +14,9 @@ def tesseract(fp):
     #                              stderr=subprocess.STDOUT)
     # acces_log = acces_log.stdout.read().decode(encoding='utf-8')
     data = subprocess.getoutput(
-        f'docker run --rm -i -v /var/www/djangoproject/media/tesseract:/app -w /app minidocks/tesseract:5-rus -l rus+eng "{fp}" stdout')
+        f'docker run --rm -i --name tesseract_docker -v "/var/www/djangoproject/media/tesseract":/app -w /app -e TESSDATA_PREFIX="/app" clearlinux/tesseract-ocr tesseract -l rus {fp} stdout --oem 1')
+    # data = subprocess.getoutput(
+    #     f'docker run --rm -i -v /var/www/djangoproject/media/tesseract:/app -w /app minidocks/tesseract:5-rus -l rus+eng "{fp}" stdout')
 
     return data
 

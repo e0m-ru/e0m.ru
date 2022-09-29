@@ -3,14 +3,14 @@
 
 {% block content %}
 
-<div class="container grid_container">
-<div>
-    {% include "e0m/acces_log.html" %}
-</div>
+<div class="container" style="display: grid; gap: 1rem;">
+    <div>
+        {% include "e0m/acces_log.html" %}
+    </div>
 
-<div>
-    {% include "e0m/error_log.html" %}
-</div>
+    <div>
+        {% include "e0m/error_log.html" %}
+    </div>
 </div>
 
 {% endblock %}
