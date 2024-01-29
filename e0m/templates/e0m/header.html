@@ -52,6 +52,37 @@
         </g>
 
     </svg>
-
 </a>
+<input id="toggle" type="checkbox"></input>
+<label id='menu_trigger' for="toggle" class="hamburger">
+    <div class="top-bun"></div>
+    <div class="meat"></div>
+    <div class="bottom-bun"></div>
+</label>
+
+<ul id='menu' class="menu">
+
+    <li>
+        <a href="/log">log</a>
+    </li>
+    <li>
+        <a href="/tess">OCR tesseract</a>
+    </li>
+    <li>
+        <a href="/trans">video</a>
+    </li>
+
+</ul>
+<script>
+    var link = document.querySelector('#menu_trigger');
+    var elem = document.querySelector('#menu');
+
+    link.addEventListener('click', function () {
+        elem.classList.toggle('show')
+    });
+
+
+</script>
 <script src="/static/js/eye.js"></script>
+<script type="text/javascript" src="/static/js/menu.js"></script>
+

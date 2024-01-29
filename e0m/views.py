@@ -26,5 +26,13 @@ def index(request):
     return render(request, 'e0m/index.html', context)
 
 
+
+def video(request):
+    context = {
+        'title': 'Бабушкин А.В. e0m.ru',
+        'color': COLOR(),
+    }
+    return render(request, 'e0m/trans.html', context)
+
 def __404__(request):
     return page_not_found(request, 'page not found')

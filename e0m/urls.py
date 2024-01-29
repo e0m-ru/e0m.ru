@@ -7,6 +7,7 @@ urlpatterns = [
     # MAIN
     path('', views.index, name='index'),
     path('log', views.log, name='log'),
+    path('trans', views.video, name='video'),
     # POST CRUD
     path('post_create', views.post_create, name='post_create'),
     path('post_read/<int:post_ID>', views.post_read, name='post_read'),
