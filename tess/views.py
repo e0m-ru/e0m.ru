@@ -4,20 +4,11 @@ from django.http.request import HttpRequest
 import os
 from django.conf import settings
 import subprocess
-import time 
-# os._wrap_close.
 
 
 def tesseract(fp):
-    # acces_log = subprocess.Popen(['docker', 'run', '--rm','-i', '-v', '/var/www/djangoproject/media/tesseract/:/app', '-w', '/app', 'minidocks/tesseract:5-rus', '-l rus+eng', f'{fp}' , f'{fp}' ],
-    #                              stdout=subprocess.PIPE,
-    #                              stderr=subprocess.STDOUT)
-    # acces_log = acces_log.stdout.read().decode(encoding='utf-8')
     data = subprocess.getoutput(
-        f'docker run --rm -i --name tesseract_docker -v "/var/www/djangoproject/media/tesseract":/app -w /app -e TESSDATA_PREFIX="/app" clearlinux/tesseract-ocr tesseract -l rus {fp} stdout --oem 1')
-    # data = subprocess.getoutput(
-    #     f'docker run --rm -i -v /var/www/djangoproject/media/tesseract:/app -w /app minidocks/tesseract:5-rus -l rus+eng "{fp}" stdout')
-
+        f'tesseract -l rus {fp} stdout')
     return data
 
 
@@ -47,7 +38,7 @@ def tess(request):
     if request.method == 'POST':
         fl = request.FILES['file']
         fu = handle_uploaded_file(fl)
-        text = tesseract(f'{fl.name}')
+        text = tesseract(f'{settings.MEDIA_ROOT}tesseract/{fl.name}')
         context.update({'text': text})
         context.update({'img': fu})
         context.update({'title': 'tesseract-results-e0m.ru'})
