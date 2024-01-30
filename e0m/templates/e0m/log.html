@@ -1,8 +1,10 @@
-<link rel="stylesheet" href="/static/css/terminal.css">
 {% extends "e0m/base.html" %}
+{% load static %}
+
 
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'css/terminal.css'%}">
 <div class="container" style="display: grid; gap: 1rem;">
     <h3>Понимаю, что небезопасно... </h3>
     <div>
