@@ -1,12 +1,9 @@
 {% extends "e0m/base.html" %}
 {% load static %}
-
+<link rel="stylesheet" href="{% static 'css/terminal.css'%}">
 
 {% block content %}
-
-<link rel="stylesheet" href="{% static 'css/terminal.css'%}">
-<div class="container" style="display: grid; gap: 1rem;">
-    <h3>Понимаю, что небезопасно... </h3>
+<div style="display: grid; gap: 1rem;">
     <div>
         {% include "e0m/acces_log.html" %}
     </div>

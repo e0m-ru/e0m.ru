@@ -1,0 +1,18 @@
+#logo {
+    width: 250px;
+    display: block;
+}
+
+#logo #sclera,
+#eye_motion,
+#hotspot {
+    fill: var(--white-color);
+}
+
+#iris{
+    fill: var(--main-color);
+}
+#pupil{
+    fill: var(--black-color);
+}
+

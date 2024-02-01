@@ -9,11 +9,9 @@
     <meta name="viewport" content="width=device-width">
     <meta name="msapplication-square192x192logo" content="{% static 'ico/android-chrome-192x192.png' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'fw/css/all.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}" />
     <link rel="icon" href="{% static 'ico/favicon.ico' %}" type="image/x-icon" />
     <link rel="apple-touch-icon" size="120x120" href="{% static 'ico/apple-touch-icon.png' %}">
-    <meta name="yandex-verification" content="ff0cce80239a9d5b" />
     <title>{{ title }}</title>
     <style>
         :root {--main-color: #{{ color.main }};
@@ -26,11 +24,12 @@
 </head>
 
 <body>
-    <div id="main" class="grid">
+    <div class="container">
         <header class="shadow">{% include "e0m/header.html" %}
         </header>
-        <article>{% block content%}{% endblock content%}
-        </article>
+
+        <main>{% block content%}{% endblock content%}
+        </main>
         <footer class="shadow">{% include "e0m/footer.html" %}
         </footer>
     </div>

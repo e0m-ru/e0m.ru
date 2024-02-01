@@ -1,160 +1,65 @@
+@import url("reset.css");
+@import url("base.css");
+@import url("logo.css");
+@import url("menu.css");
 
-/* BASE */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-weight: 200;
-	color: var(--white-color);
-}
-
-:root {
-	--white-color: #dddddd;
-	--black-color: #333333;
-}
-
-body {
+main {
 	background-color: var(--main-color);
-	font-family: Tahoma, Verdana, sans-serif;
-	/* min-height: 100vh; */
-	/* width: 100%; */
 }
 
-a {
-	color: var(--white-color);;
-}
-
-a :hover {
-	color: var(--black-color);
-}
-
-.container {
-	width: 100%;
+article {
+	background-color: var(--white-color);
 	height: 100%;
-	padding: 1rem;
+	width: min(100%, 960px);
 	margin: auto;
+	padding: 1rem;
 }
 
-/* COLORS */
-.main {
-	fill: var(--main-color);
-}
-
-.white {
-	fill: var(--white-color);
-	color: var(--white-color);
-}
-
-.black {
-	fill: var(--black-color);
-	color: var(--black-color);;
-}
-
-.white-stroke {
-	fill: none;
-	stroke: var(--white-color);
-	stroke-miterlimit: 10;
-	stroke-width: 2
-}
-
-
-/* GRID */
-.grid {
-	display: grid;
-	justify-items: stretch;
-	align-items: stretch;
-}
-
-
-
-.grid  header, article, footer {
+header,
+footer {
+	background-color: #f2f2f2;
 	display: grid;
 	place-items: center;
-}
-
-.grid-container {
-	display: grid;
-	gap: 1rem;
-	margin: 2rem 0;
-}
-
-.tab {
-	display: grid;
-	grid-auto-flow: column;
-	justify-items: center;
-	align-items: center;
-}
-
-/* TYPE   */
-h1 {
-	font-size: 5rem;
-	font-style: normal;
-	font-weight: 100;
-	color: var(--white-color);
-	display: block;
-}
-
-
-/* CONTENT */
-article {
-	overflow: auto;
+	z-index: 1;
 }
 
 /* HEADER */
 header {
 	background-color: var(--main-color);
-	z-index: 999;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
-#logo {
-	width: 100%;
-	max-width: 250px;
-	display: block;
+#menu-icon {
+	position:absolute;
+	right: 1rem;
+	align-items: flex-end;
 }
-
 
 /* FOOTER  */
 footer {
 	background-color: var(--main-color);
-	padding: 1rem;
 	color: #FFFFFF;
-}
-
-/* SCROLL  */
-*::-webkit-scrollbar {
-	width: 10px;
-	/* width of the entire scrollbar */
-}
-
-*::-webkit-scrollbar-track {
-	background: var(--main-color);
-	/* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: var(--white-color);
-	/* color of the scroll thumb */
-	border-radius: 20px;
-	/* roundness of the scroll thumb */
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 
-/* EFFECTS  */
-.shadow {
-	box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+a {
+	color: var(--white-color);
 }
 
-.center {
-	justify-content: center;
-	justify-content: baseline;
-}
-
+/* ICONS */
 .icons {
 	transform: scale(1);
 	transition: all 0.1s;
-	color: var(--light-color);
+	color: var(--white-color);
 	text-shadow: 0 0 1px var(--light-color);
 }
+
+.icons:visited {
+	color: var(--white-color);
+}
+
 .icons:hover {
 	transform: scale(1.1);
 	text-shadow: 0 0 30px var(--light-color);
@@ -162,22 +67,21 @@ footer {
 }
 
 /* FORM */
-
 form {
 	display: grid;
 	gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
 	line-height: 2rem;
 	padding: .5rem 1rem;
-	border: solid 0 ;
+	border: solid 0;
 	border-radius: 1rem;
 	background-color: var(--white-color);
 	color: var(--dark-color);
 	font-size: 1.5rem;
 }
-
 
 button[type=submit] {
 	padding: 1rem;
@@ -186,105 +90,13 @@ button[type=submit] {
 	color: var(--dark-color);
 	font-size: 1.5rem;
 }
+
 button[type=submit]:hover {
 	background-color: var(--second-color);
 	color: var(--white-color);
 }
 
-.menu {
-	overflow: hidden;
-	height: 0;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	opacity: 0%;
-	transition: all 0.2s ease-in-out;
-	list-style-type: none;
-	text-align: end;
-	right: 0;
-	background-color: var(--main-color);
-	z-index: 999;
-	color: wheat;
-}
-
-.menu li {
-	border-bottom: solid 1px;
-	padding: 0.5em;
-}
-
-.menu li:hover {
-	background-color: var(--base_color);
-}
-
-.menu a {
-	display: block;
-	text-align: center;
-	color: white;
-	text-decoration: none;
-	width: 100%;
-	/* height: 100%; */
-}
-
-.menu.show {
-	height: auto;
-	opacity: 97.5%;
-}
-
-/** Hamburger **/
-.hamburger {
-	position: absolute;
-	right: 1em;
-	top: 0.5em;
-}
-
-.hamburger div {
-	position: relative;
-	width: 35px;
-	height: 5px;
-	background-color: #fff;
-	margin-top: 6px;
-	transition: all 0.3s ease-in-out;
-}
-
-/** Animations **/
-#toggle:checked+.hamburger .top-bun {
-	transform: rotate(-45deg);
-	margin-top: 15px;
-}
-
-#toggle:checked+.hamburger .bottom-bun {
-	opacity: 0;
-	transform: rotate(45deg);
-}
-
-#toggle:checked+.hamburger .meat {
-	transform: rotate(45deg);
-	margin-top: -5px;
-}
-
-#toggle:checked+.hamburger+.nav {
-	top: 0;
-	transform: scale(1);
-}
-
-#toggle {
-	display: none;
-}
-
-.anons_string {
-	font-size: 0.75rem !important;
-	padding: 0.5rem !important;
-	z-index: 999;
-	position: absolute;
-	bottom: 1rem;
-	opacity: 0.75;
-	background-color: rgba(28, 119, 189, 0.75);
-	color: #FFF;
-	width: 100%;
-	opacity: .75;
-	transition: all 1s ease-in-out;
-}
-
-#player:hover .anons_string {
-	opacity: 0;
+/* EFFECTS  */
+.shadow {
+	box-shadow: 0 0 50px rgba(0, 0, 0, .5);
 }
