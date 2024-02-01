@@ -1,14 +1,6 @@
-window.addEventListener('scroll', function () {
-    var shrinkHeader = 1;
-    // var header = document.querySelector('.header');
-    var logo = document.querySelector('#logo');
-    var scroll = window.scrollY || document.documentElement.scrollTop;
+var link = document.querySelector('#menu_trigger');
+var elem = document.querySelector('#menu');
 
-    if (scroll >= shrinkHeader) {
-        // header.classList.add('shrink');
-        logo.classList.toggle('big');
-    } else {
-        // header.classList.remove('shrink');
-        logo.classList.toggle('big');
-    }
+link.addEventListener('click', function () {
+    elem.classList.toggle('show')
 });

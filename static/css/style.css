@@ -1,169 +1,65 @@
 @import url("reset.css");
+@import url("base.css");
+@import url("logo.css");
 @import url("menu.css");
 
-/* NEW */
-		        body {
-		        	margin: 0;
-		        	padding: 0;
-		        	font-family: Arial, sans-serif;
-		        	background-color: darkblue;
-		        }
-		
-		        .container {
-		        	display: grid;
-		        	grid-template-rows: 3rem auto 3rem;
-		        	min-height: 100vh;
-		        }
-		
-		        header,
-		        footer {
-		        	background-color: #f2f2f2;
-		        }
-		
-		        main {
-		        	/* min-width: 75vw; */
-		        	min-width: clamp(1920px, 100vh);
-		        	max-width: clamp(100vw, 1920px);
-		        	height: calc(100vh-6rem);
-		        	overflow: hidden;
-		        	background-color: aliceblue;
-		        	margin: 0 auto;
-		        }
-/* NEW */
-
-/* BASE */
-:root {
-	--white-color: #eeeeee;
-	--black-color: #222222;
-}
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-weight: 200;
-	color: var(--white-color);
-}
-
-
-body {
+main {
 	background-color: var(--main-color);
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container {
-	width: 100%;
+article {
+	background-color: var(--white-color);
 	height: 100%;
-	padding: 1rem;
+	width: min(100%, 960px);
 	margin: auto;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-/* COLORS */
-.main {
-	fill: var(--main-color);
+	padding: 1rem;
 }
 
-.white {
-	fill: var(--white-color);
-	color: var(--white-color);
-}
-
-.black {
-	fill: var(--black-color);
-	color: var(--black-color);;
-}
-
-.white-stroke {
-	fill: none;
-	stroke: var(--white-color);
-	stroke-miterlimit: 10;
-	stroke-width: 2
-}
-
-
-/* GRID */
-.grid {
-	display: grid;
-	justify-items: stretch;
-	align-items: stretch;
-}
-
-.grid  header, article, footer {
+header,
+footer {
+	background-color: #f2f2f2;
 	display: grid;
 	place-items: center;
+	z-index: 1;
 }
-
-.tab {
-	display: grid;
-	grid-auto-flow: column;
-	justify-items: center;
-	align-items: center;
-}
-
-/* TYPE   */
-h1 {
-	font-size: 5rem;
-	font-style: normal;
-	font-weight: 100;
-	color: var(--white-color);
-	display: block;
-}
-
-
 
 /* HEADER */
 header {
 	background-color: var(--main-color);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
-#logo {
-	width: min(50%, 200px);
-	display: block;
+#menu-icon {
+	position:absolute;
+	right: 1rem;
+	align-items: flex-end;
 }
-
 
 /* FOOTER  */
 footer {
 	background-color: var(--main-color);
-	padding: 1rem;
 	color: #FFFFFF;
-}
-
-/* SCROLL  */
-*::-webkit-scrollbar {
-	width: 10px;
-	/* width of the entire scrollbar */
-}
-
-*::-webkit-scrollbar-track {
-	background: var(--main-color);
-	/* color of the tracking area */
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: var(--white-color);
-	/* color of the scroll thumb */
-	border-radius: 20px;
-	/* roundness of the scroll thumb */
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 
-/* EFFECTS  */
-.shadow {
-	box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+a {
+	color: var(--white-color);
 }
 
-.center {
-	justify-content: center;
-	justify-content: baseline;
-}
-
+/* ICONS */
 .icons {
 	transform: scale(1);
 	transition: all 0.1s;
-	color: var(--light-color);
+	color: var(--white-color);
 	text-shadow: 0 0 1px var(--light-color);
 }
+
+.icons:visited {
+	color: var(--white-color);
+}
+
 .icons:hover {
 	transform: scale(1.1);
 	text-shadow: 0 0 30px var(--light-color);
@@ -171,22 +67,21 @@ footer {
 }
 
 /* FORM */
-
 form {
 	display: grid;
 	gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
 	line-height: 2rem;
 	padding: .5rem 1rem;
-	border: solid 0 ;
+	border: solid 0;
 	border-radius: 1rem;
 	background-color: var(--white-color);
 	color: var(--dark-color);
 	font-size: 1.5rem;
 }
-
 
 button[type=submit] {
 	padding: 1rem;
@@ -195,25 +90,13 @@ button[type=submit] {
 	color: var(--dark-color);
 	font-size: 1.5rem;
 }
+
 button[type=submit]:hover {
 	background-color: var(--second-color);
 	color: var(--white-color);
 }
 
-.anons_string {
-	font-size: 0.75rem !important;
-	padding: 0.5rem !important;
-	z-index: 999;
-	position: absolute;
-	bottom: 1rem;
-	opacity: 0.75;
-	background-color: rgba(28, 119, 189, 0.75);
-	color: #FFF;
-	width: 100%;
-	opacity: .75;
-	transition: all 1s ease-in-out;
-}
-
-#player:hover .anons_string {
-	opacity: 0;
+/* EFFECTS  */
+.shadow {
+	box-shadow: 0 0 50px rgba(0, 0, 0, .5);
 }
