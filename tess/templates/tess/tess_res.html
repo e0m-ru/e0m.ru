@@ -1,10 +1,11 @@
 {% extends "e0m/base.html" %}
 
 {% block content %}
+<article>
 <h2> {{ title }} </h2>
 
-<div class="container" style="padding: 2rem; color: var(--black-color);">
-    <img src="{{img}}" width="200px">
+    <img src="{{img}}" width="25%" style="float:left; margin: 4px 10px 2px 0px;">
     <p>{{ text }}</p>
-</div>
+
+</article>
 {% endblock %}
