@@ -32,7 +32,7 @@ def video(request):
         'title': 'Бабушкин А.В. e0m.ru',
         'color': COLOR(),
     }
-    return render(request, 'e0m/trans.html', context)
+    return render(request, 'e0m/video.html', context)
 
 def __404__(request):
     return page_not_found(request, 'page not found')
