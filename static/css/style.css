@@ -101,6 +101,7 @@ button[type=submit] {
 		4px 4px 5px 0px rgba(0, 0, 0, .1);
 	outline: none;
 }
+
 input:hover,
 button[type=submit]:hover {
 	cursor: pointer;
@@ -111,4 +112,20 @@ button[type=submit]:hover {
 /* EFFECTS  */
 .shadow {
 	box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+}
+
+/* ANONS */
+.anons_string {
+	font-size: 0.75rem !important;
+	padding: 0.5rem !important;
+	z-index: 999;
+	position: absolute;
+	bottom: 1rem;
+	opacity: 0.75;
+	background-color: rgba(28, 119, 189, 0.75);
+	color: #FFF;
+	width: 100%;
+	opacity: .75;
+	transition: all 1s ease-in-out;
+
 }
