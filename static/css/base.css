@@ -1,0 +1,34 @@
+/* VARIABLES */
+:root {
+	--white-color: #eeeeee;
+	--black-color: #222222;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.page {
+	display: grid;
+	grid-template-rows: 3rem auto 3rem;
+	min-height: 100vh;
+}
+
+main{
+	display: grid;
+}
+
+/* SCROLL  */
+*::-webkit-scrollbar {
+	width: 10px;
+	/* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--main-color);
+	/* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--white-color);
+	/* color of the scroll thumb */
+	border-radius: 20px;
+	/* roundness of the scroll thumb */
+}
