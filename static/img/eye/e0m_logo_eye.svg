@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="eye" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="19.8 1 100 100" style="enable-background:new 19.8 1 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#3399FF;}
+	.st2{fill:#1D1D1B;}
+</style>
+<g id="sclera">
+	<path class="st0" d="M69.8,76c-27.6,0-50-25-50-25s22.4-25,50-25c27.6,0,50,25,50,25S97.4,76,69.8,76z"/>
+</g>
+<g id="eye_x5F_ball">
+	<circle id="iris" class="st1" cx="69.8" cy="51" r="25"/>
+	<circle id="pupil_1_" class="st2" cx="69.8" cy="51" r="12.5"/>
+	<circle id="hotspot" class="st0" cx="69.8" cy="51" r="5"/>
+</g>
+</svg>
