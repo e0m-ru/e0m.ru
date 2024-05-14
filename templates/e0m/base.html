@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="e0m - motion designer site">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="msapplication-square192x192logo" content="{% static 'ico/android-chrome-192x192.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}" />
+    <link rel="icon" href="{% static 'ico/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" size="120x120" href="{% static 'ico/apple-touch-icon.png' %}">
+    <title>{{ title }}</title>
+    <style>
+        :root {--main-color: #{{ color.main }};
+            --second-color: #{{ color.second }};
+            --opposite-color: #{{ color.opposite }};
+            --light-color: #{{ color.light }};
+            --dark-color: #{{ color.dark }};}
+    </style>
+
+</head>
+
+<body>
+    <div class="page">
+        <header class="shadow">{% include "e0m/header.html" %}
+        </header>
+
+        <main>{% block content%}{% endblock content%}
+        </main>
+        <footer class="shadow">{% include "e0m/footer.html" %}
+        </footer>
+    </div>
+</body>
+<!-- <script src="{% static '/fw/js/all.js' %}"></script> -->
+
+</html>

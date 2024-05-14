@@ -1,0 +1,16 @@
+{% extends "e0m/base.html" %}
+
+{% block content %}
+<div class="grid-container">
+    <h2> {{ title }} </h2>
+    <form method="POST" name="post_create" class="center">
+        {% csrf_token %}
+        <div>{{ form.title }}</div>
+        <div><textarea name="description"  required="" id="id_description"></textarea></div>
+        <div>
+            <button type="submit">Send post</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

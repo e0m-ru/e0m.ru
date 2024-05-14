@@ -1,0 +1,46 @@
+{% extends "e0m/base.html" %}
+
+{% block content %}
+
+<article>
+    {% load static %}
+    <div style="margin: 1rem; display: block;">
+        <img src="{% static 'img/A_Babushkin.jpeg' %}" loading="lazy" alt="" width="90px"
+            style="float: left; margin: .5rem;">
+        <h1 style="margin: .5rem;">Бабушкин Александр Викторович</h1>
+        <p>Рассматриваю предложения по работе на должность <u>Python Разработчик</u></p>
+    </div>
+    <hr class="hr-line">
+    <div>
+
+        <span class="skills">Python</span>
+        <span class="skills">Django</span>
+        <span class="skills">FastAPI</span>
+        <span class="skills">JavaScript</span>
+        <span class="skills">SQL</span>
+        <span class="skills">HTML</span>
+        <span class="skills">CSS</span>
+        <span class="skills">Linux</span>
+        <span class="skills">Git</span>
+        <span class="skills">Docker</span>
+    </div>
+    <div>
+        <p>Работаю начальником ТВ отдела в пресс-центре МИД РФ. Мечтаю войти в IT. </p>
+        <p>С целью автоматизации документооборота начал изучать
+            Python. Внедрил распознавание (ocr tesseract) печатного текста и организовал несколько telegramm ботов для
+            формирования
+            отчётов и организации работ. Внедрил распознавание устной речи в текст (whisper)</p>
+        <ul class="e_list">
+            <li>В 1990-х годах освоил BASIC, затем Pascal</li>
+            <li>С 2000 по 2010 забросил программирование - увлекся видео-дизайном</li>
+            <li>2009 по 2013 запустил несколько коммерческих проектов на Joomla, Wordpress и др.</li>
+            <li>В этот период освоил HTML, CSS, JavaScript, PHP</li>
+            <li>Вновь начал изучать Python пару лет назад, прошел несколько курсов.</li>
+            <li>Начал работать с Django над проектами http://wwbb.ru и https://eurolos-master.ru/</li>
+            <li>В настоящее время разрабатываю календарь событий в качестве PetProject</li>
+        </ul>
+        <p>+ motingraphic design, + в портфолио несколько коммерческих сайтов. Создаю видео контент для мероприятий.</p>
+    </div>
+</article>
+
+{% endblock content%}

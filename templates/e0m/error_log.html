@@ -1,0 +1,15 @@
+<div class="terminal-window shadow">
+    <div class="terminal-header">
+        <div class="button green" style="margin-left: 10px;"></div>
+        <div class="button yellow"></div>
+        <div class="button red"></div>
+        <p class="black">/var/log/nginx/error.log</p>
+    </div>
+    <section class="terminal">
+        {% for ln in STDOUT_error %}
+        <p>
+            {{ ln }}
+        </p>
+        {% endfor %}
+    </section>
+</div>
