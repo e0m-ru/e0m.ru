@@ -1,0 +1,18 @@
+{% extends "e0m/base.html" %}
+
+{% block content %}
+<article>
+	<h1>Сервис распознования текста</h1>
+    <h4><a href="https://github.com/tesseract-ocr/tesseract">OCR-Tesseract</a></h4>
+
+    <form method="POST" name="tesseract_form" action="/tess" enctype="multipart/form-data">
+        {% csrf_token %}
+	<div id="drag-and-drop-zone" class="drop-zone">
+	Перетащите файлы сюда или кликните для загрузки
+	</div>
+        <input type="file" name="file">
+        <button type="submit">Отправить для распознования</button>
+    </form>
+<script src="/static/js/upload.js"></script>
+</article>
+{% endblock %}
