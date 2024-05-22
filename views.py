@@ -33,5 +33,13 @@ def video(request):
     }
     return render(request, 'e0m/video.html', context)
 
+
+def ctspi(request):
+    context = {
+        'title': 'ctspi.online',
+        'color': COLOR(),
+    }
+    return render(request, 'e0m/ctspi.html', context)
+
 def __404__(request):
     return page_not_found(request, 'page not found')

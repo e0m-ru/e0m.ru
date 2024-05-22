@@ -15,20 +15,30 @@
 }
 
 #menu ul {
-}
-#menu li {
-    padding: 0.5rem 1rem;
-    background-color: var(--main_color);
-    border-bottom: solid#fff;
+    margin: 0;
 }
 
-#menu li:hover {
-    background-color: var(--dark-color);
+#menu li {
+    border-bottom: solid#fff;
+    width: 100%;
 }
+
+/* #menu li:hover {
+    background-color: var(--dark-color);
+} */
 
 #menu a {
+    padding: 0.5rem 1rem;
+    display: inline-block;
     color: white;
     text-decoration: none;
+    background-color: none;
+    height: 100%;
+    width: 100%;
+}
+
+#menu a:hover {
+    background-color: var(--second-color);
 }
 
 
